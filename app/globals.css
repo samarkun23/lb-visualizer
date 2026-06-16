@@ -1,0 +1,43 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #0a0a0f;
+  --bg2:     #111118;
+  --bg3:     #1a1a24;
+  --border:  rgba(255,255,255,0.08);
+  --border2: rgba(255,255,255,0.15);
+  --text:    #e8e8f0;
+  --muted:   #6b6b80;
+  --accent:  #6c63ff;
+  --green:   #14F195;
+  --c1: #3B8BD4;
+  --c2: #1D9E75;
+  --c3: #E8A020;
+  --c4: #D45050;
+}
+
+html, body { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: rgba(108,99,255,0.3); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
+
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+strong { color: var(--text); }
+
+.srv-bar-fill { transition: width 0.4s ease; }
+
+@media (max-width: 500px) {
+  .stats-grid  { grid-template-columns: repeat(2,1fr) !important; }
+  .server-bars { grid-template-columns: repeat(2,1fr) !important; }
+}
