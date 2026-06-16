@@ -117,7 +117,6 @@ export default function Visualizer() {
   return (
     <div style={{ padding: '32px 16px 56px', maxWidth: 860, margin: '0 auto' }}>
 
-      {/* ── HEADER ── */}
       <div style={{ textAlign: 'center', marginBottom: 32 }}>
         <div style={{
           display: 'inline-flex', alignItems: 'center', gap: 8,
@@ -147,10 +146,8 @@ export default function Visualizer() {
         </p>
       </div>
 
-      {/* ── MAIN CARD ── */}
       <div style={card}>
 
-        {/* TABS */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 18 }}>
           {ALGORITHMS.map(a => (
             <button
@@ -170,7 +167,6 @@ export default function Visualizer() {
           ))}
         </div>
 
-        {/* CANVAS */}
         <LBCanvas
           servers={servers}
           lastPick={lastPick}
@@ -180,7 +176,6 @@ export default function Visualizer() {
           animSpeed={animSpeed}
         />
 
-        {/* SERVER BARS */}
         <div
           className="server-bars"
           style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 8, margin: '14px 0' }}
@@ -215,7 +210,6 @@ export default function Visualizer() {
           ))}
         </div>
 
-        {/* STATS */}
         <div
           className="stats-grid"
           style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 8, marginBottom: 14 }}
@@ -243,7 +237,6 @@ export default function Visualizer() {
           ))}
         </div>
 
-        {/* DESC */}
         <div style={{
           background: 'var(--bg3)', border: '1px solid var(--border)',
           borderLeft: `3px solid ${algo.color}`, borderRadius: '0 10px 10px 0',
@@ -256,7 +249,6 @@ export default function Visualizer() {
           </div>
         </div>
 
-        {/* CONTROLS */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
           <button
             onClick={sendReq}
